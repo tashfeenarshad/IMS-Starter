@@ -13,7 +13,7 @@ import com.qa.ims.persistence.domain.Items;
 import com.qa.ims.persistence.domain.Order;
 import com.qa.ims.utils.DBUtils;
 
-ppackage com.qa.ims.persistence.dao;
+
 
 import static org.junit.Assert.assertEquals;
 
@@ -29,7 +29,7 @@ import org.junit.FixMethodOrder;
 import com.qa.ims.persistence.domain.Order;
 import com.qa.ims.utils.DBUtils;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
 public class OrderDAOTest {
 
 	private final OrderDAO DAO = new OrderDAO();
