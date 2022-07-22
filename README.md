@@ -12,8 +12,8 @@ Java 8
 MySQl 1.7 or greater
 Maven
 ```
-Give examples
-```
+
+
 
 ### Installing
 
@@ -71,11 +71,7 @@ Give an example@Test
 	}
 
 
-
-
-
-
-**## Deployment**
+### Deployment
 
 To run your .jar file for your project move into the command line or terminal(for Mac), move to the file location for your .jar file and enter
 
