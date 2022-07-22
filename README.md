@@ -1,16 +1,16 @@
-Coverage: 34%
-# Project Title
+Coverage: 67%
+# IMS
 
-One Paragraph of project description goes here
-
+This IMS programme is designed to allow a usef to Create,read,update or delete a customer,item or order from the system.
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
+To begin using the project download a clone of the git repository of ims_project above, Here you can find a .jar file which can run the project via the command line or powershell. If you wish to make additions to the project clone to respository to your machine and run your prefered Java IDE (preferably Eclipse). Once you have eclipse open, go into your workspace and open "Open Project"
 ### Prerequisites
 
 What things you need to install the software and how to install them
-
+Java 8
+MySQl 1.7 or greater
+Maven
 ```
 Give examples
 ```
@@ -39,20 +39,46 @@ Explain how to run the automated tests for this system. Break down into which te
 
 ### Unit Tests 
 
-Explain what these tests test, why and how to run them
+The JUnit tests in the program can be located in the src/test/java folder and are used in the DAO and domain classes, this contains code which tests out the variables and minor functionality which has be set up and uses fixed data to test
 
 ```
 Give an example
-```
+public class ItemDAOtest {
+
+	private final ItemsDAO DAO = new ItemsDAO();
+
+	@Before
+	public void setup() {
+		DBUtils.connect();
+		DBUtils.getInstance().init("src/test/resources/sql-Itemsschema.sql", "src/test/resources/sql-Itemsdata.sql");
+	}
+
+	@Test
+	public void testCreate() {
+		final Items created = new Items(2L, "choclate", 20.99);
+		assertEquals(created, DAO.create(created));
+	}
+
 
 ### Integration Tests 
-Explain what these tests test, why and how to run them
+The Integration tests in the program can be located in the src/test/java folder and are used in the Controller classes, this tests the object functions within your code
 
 ```
 Give an example
-```
+@Test
+	public void testCreate() {
+		final String F_NAME = "barry", L_NAME = "scott";
+		final Customer created = new Customer(F_NAME, L_NAME);
 
-### And coding style tests
+		Mockito.when(utils.getString()).thenReturn(F_NAME, L_NAME);
+		Mockito.when(dao.create(created)).thenReturn(created);
+
+		assertEquals(created, controller.create());
+
+		Mockito.verify(utils, Mockito.times(2)).getString();
+		Mockito.verify(dao, Mockito.times(1)).create(created);
+	}
+
 
 Explain what these tests test and why
 
@@ -62,7 +88,10 @@ Give an example
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+To run your .jar file for your project move into the command line or terminal(for Mac), move to the file location for your .jar file and enter
+
+java -jar 'file'.jar
+This will then run your test on your system and open your up to the first class of your project which is the runner and it will ask you for login details
 
 ## Built With
 
@@ -74,7 +103,8 @@ We use [SemVer](http://semver.org/) for versioning.
 
 ## Authors
 
-* **Chris Perrins** - *Initial work* - [christophperrins](https://github.com/christophperrins)
+*Jordan Belbenbalid
+*Piers Barber
 
 ## License
 
