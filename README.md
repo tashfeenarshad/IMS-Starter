@@ -56,10 +56,7 @@ public class ItemDAOtest {
 The Integration tests in the program can be located in the src/test/java folder and are used in the Controller classes, this tests the object functions within your code
 
 ```
-Give an example
-
-
-@Test
+Give an example@Test
 	public void testCreate() {
 		final String F_NAME = "barry", L_NAME = "scott";
 		final Customer created = new Customer(F_NAME, L_NAME);
@@ -78,7 +75,7 @@ Give an example
 
 
 
-## Deployment
+**## Deployment**
 
 To run your .jar file for your project move into the command line or terminal(for Mac), move to the file location for your .jar file and enter
 
