@@ -4,7 +4,7 @@ Coverage: 62.7%
 This IMS programme is designed to allow a usef to Create,read,update or delete a customer,item or order from the system.
 ## Getting Started
 
-To begin using the project download a clone of the git repository of ims_project above, Here you can find a .jar file which can run the project via the command line or powershell. If you wish to make additions to the project clone to respository to your machine and run your prefered Java IDE (preferably Eclipse). Once you have eclipse open, go into your workspace and open "Open Project"
+To begin using the project download a clone of the git repository of ims_project above, Here you can find a .jar file which can run the project via the command line or powershell. If you wish to make additions to the project clone to respository to your machine and run your prefered Java IDE (preferably Eclipse). Once you have eclipse open, go into your workspace and open "Open Project" and select IMS starter that should be in your downloada or whereever you saved it
 ### Prerequisites
 
 What things you need to install the software and how to install them
